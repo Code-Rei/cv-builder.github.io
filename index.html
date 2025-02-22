@@ -1,80 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="/V-Icon.png" type="image/x-icon">
-</head>
-<body>
-    <div class="content">
-        <div class="resume-container" id="resume-container">
-            <div class="sidebar">
-                <h2 contenteditable="true">Vasudev Yadav</h2>
-                <div class="contact">
-                    <h3>CONTACT</h3>
-                    <p>Email: <a href="mailto:vasuy035@gmail.com" contenteditable="true">vasuy035@gmail.com</a></p>
-                    <p>Phone: <span contenteditable="true">+91 9983614557</span></p>
-                    <p>Location: <span contenteditable="true">Kota, Rajasthan</span></p>
-                </div>
-                <div class="education">
-                    <h3>EDUCATION</h3>
-                    <p contenteditable="true">BCA(Modi Institute of Management & Technology)</p>
-                    <p contenteditable="true">12<sup>th</sup> from RBSE</p>
-                </div>
-                <div class="skills">
-                    <h3>SKILLS</h3>
-                    <p contenteditable="true">MS-Office</p>
-                    <p contenteditable="true">SAP</p>
-                    <p contenteditable="true">Microsoft Windows</p>
-                    <p contenteditable="true">Adobe</p>
-                    <p contenteditable="true">Premier Pro</p>
-                </div>
-            </div>
-            <div class="main-content">
-                <h3>CAREER OBJECTIVE</h3>
-                <p contenteditable="true">Dedicated MIS Executive with expertise in SAP Material Management and E-Mitra services, seeking to leverage strong analytical, organizational, and problem-solving skills to drive operational excellence and contribute to the success of a dynamic organization.</p>
-                <h3>PROFESSIONAL SUMMARY:</h3>
-                <ul>
-                    <li contenteditable="true">Experienced MIS Executive at AMBUJA Cements Limited, specializing in SAP Material Management and administrative support.</li>
-                    <li contenteditable="true">Proficient in sales reporting, order processing, customer code management, and vendor relations.</li>
-                    <li contenteditable="true">Strong analytical and organizational skills, with meticulous attention to detail.</li>
-                    <li contenteditable="true">Excel expert for data analysis and report generation; proficient in Microsoft Word and PowerPoint.</li>
-                    <li contenteditable="true">Effective communicator and collaborator with stakeholders and vendors.</li>
-                    <li contenteditable="true">Skilled in multitasking, prioritizing, and meeting deadlines in a fast-paced environment.</li>
-                    <li contenteditable="true">Previous experience as an E-Mitra Owner/Operator, ensuring citizen services and data security.</li>
-                    <li contenteditable="true">Oversee end-to-end loan disbursement process, ensuring compliance with YES Bank BC guidelines and regulatory requirements.</li>
-                    <li contenteditable="true">Manage funding activities, liquidity requirements, and cash flow projections for timely disbursements.</li>
-                    <li contenteditable="true">Lead and motivate a team of 76 staff members across 36 branches, ensuring adherence to operational standards and achieving performance targets.</li>
-                </ul>
-                <div class="skills-strength-container">
-                    <div class="skills-strength">
-                        <h3>Key Skills</h3>
-                        <ul>
-                            <li contenteditable="true">Goal Achieving</li>
-                            <li contenteditable="true">Effective Communication</li>
-                            <li contenteditable="true">Problem Solving</li>
-                            <li contenteditable="true">Technical Knowledge</li>
-                            <li contenteditable="true">Strategic Planning</li>
-                        </ul>
-                    </div>
-                    <div class="skills-strength">
-                        <h3>Strength</h3>
-                        <ul>
-                            <li contenteditable="true">Self Motivated</li>
-                            <li contenteditable="true">Team Spirit</li>
-                            <li contenteditable="true">Quick Learner</li>
-                            <li contenteditable="true">Effective Communication with others</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <footer>©Code-Rei 2024</footer>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Builder</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="top-buttons">
+      <div class="input-group">
+        <label for="experienceCount">Experience Entries:</label>
+        <input type="number" id="experienceCount" min="1" value="1" />
+        <button id="generateBtn">Generate</button>
+      </div>
+
+      <div class="input-group">
+        <label>Education Entries:</label>
+        <input type="number" id="educationCount" min="1" value="1" />
+        <button id="generateEducationBtn">Generate</button>
+      </div>
+
+      <div class="input-group">
+        <label>Certification Entries:</label>
+        <input type="number" id="certificationCount" min="1" value="1" />
+        <button id="generateCertificationBtn">Generate</button>
+      </div>
+
+      <div class="input-group">
+        <label>Skills Entries:</label>
+        <input type="number" id="skillsCount" min="1" value="1" />
+        <button id="generateSkillsBtn">Generate</button>
+      </div>
+
+      <div class="input-group">
+        <label>Languages Known:</label>
+        <input type="number" id="languagesCount" min="1" value="1" />
+        <button id="generateLanguagesBtn">Generate</button>
+      </div>
     </div>
-</body>
+
+    <div class="container">
+      <div class="heading">
+        <label for="imageUpload">
+          <img src="./unknown1.jpg" alt="" class="profile" id="profileImage" />
+        </label>
+        <input
+          type="file"
+          id="imageUpload"
+          accept="image/*"
+          style="display: none"
+        />
+
+        <h1 contenteditable="true">Vasudev Yadav</h1>
+        <div class="contact-info">
+          <div contenteditable="true">+91 9983614557</div>
+          <div contenteditable="true">Date of Birth – 01-12-2001</div>
+          <div contenteditable="true">Kota, Rajasthan 324010</div>
+          <div contenteditable="true">
+            <a href="mailto:vasuy035@gmail.com" target="_blank"
+              >vasuy035@gmail.com</a
+            >
+          </div>
+          <div contenteditable="true">
+            <a href="https://www.linkedin.com/in/vasu-dev-yadav" target="_blank"
+              >www.linkedin.com/in/vasu-dev-yadav</a
+            >
+          </div>
+          <div contenteditable="true">
+            <a href="https://www.github.com/Code-Rei" target="_blank"
+              >www.github.com/Code-Rei</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <h2 contenteditable="true">Professional Summary</h2>
+        <p contenteditable="true">
+          Dynamic Business Analyst with expertise in requirement gathering, BRD
+          creation, and strategic planning. Skilled in SQL for data analysis and
+          reporting, facilitating data-driven decision-making. Experienced in
+          quality control, ensuring accuracy and efficiency in project
+          execution. Adept at process optimization, wireframing, and UI design
+          to enhance user experience. Strong problem-solving and communication
+          skills, ensuring seamless collaboration between stakeholders and
+          development teams to deliver high-quality projects efficiently.
+        </p>
+      </div>
+      <h2 contenteditable="true">experience</h2>
+      <section class="experiencetable">
+        <div class="experience-table">
+          <div class="job">
+            <!-- Kamal Fincap PVT. LTD. | Kota, RJ - Analyst -->
+            <div class="company">
+              <h4>Kamal Fincap PVT. LTD.</h4>
+              <p>QC Analyst & Project Management</p>
+              <p><strong>Jan-24</strong> | <strong>Current</strong></p>
+            </div>
+            <div class="points">
+              <ul>
+                <li>
+                  <strong>Project Management:</strong> Oversee development
+                  teams, ensuring timely project delivery and quality standards.
+                </li>
+                <li>
+                  <strong>BRD & Documentation:</strong> Create Business
+                  Requirement Documents (BRD) to clearly define project scope,
+                  functionalities, and technical requirements.
+                </li>
+                <li>
+                  <strong>Wireframe Building:</strong> Design wireframes to
+                  visualize user flow and structure for web applications.
+                </li>
+                <li>
+                  <strong>UI Design:</strong> Create user-friendly interfaces,
+                  ensuring consistency across platforms.
+                </li>
+                <li>
+                  <strong>SQL:</strong> Worked with large SQL tables for data
+                  extraction, reporting, and calculations.
+                </li>
+                <li>
+                  <strong>Testing:</strong> Conduct functional and cross-browser
+                  testing to ensure seamless user experience.
+                </li>
+                <li>
+                  <strong>Requirement Analysis:</strong> Gather and analyze
+                  business requirements to bridge the gap between internal teams
+                  and the development team, ensuring clear project objectives.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <h2 contenteditable="true">EDUCATION & Certifications</h2>
+      <section class="Education">
+        <div class="table-container">
+          <!-- Education Table -->
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th colspan="3">EDUCATION</th>
+              </tr>
+              <tr>
+                <th>Degree</th>
+                <th>Institution</th>
+                <th>Year</th>
+              </tr>
+            </thead>
+            <tbody id="educationBody">
+              <!-- Dynamic Rows Will Be Added Here -->
+            </tbody>
+          </table>
+
+          <!-- Certification Table -->
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th colspan="3">CERTIFICATIONS</th>
+              </tr>
+              <tr>
+                <th>Certification</th>
+                <th>Institution</th>
+                <th>Year</th>
+              </tr>
+            </thead>
+            <tbody id="certificationBody">
+              <!-- Dynamic Rows Will Be Added Here -->
+            </tbody>
+          </table>
+
+          <!-- Skills Table -->
+          <h2>Skills</h2>
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th colspan="2">TECHNICAL & SOFT SKILLS</th>
+              </tr>
+              <tr>
+                <th>Technical Skills</th>
+                <th>Soft Skills</th>
+              </tr>
+            </thead>
+            <tbody id="skillsBody">
+              <!-- Dynamic Rows Will Be Added Here -->
+            </tbody>
+          </table>
+
+          <!-- Languages Table -->
+          <h2>Languages Known</h2>
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th colspan="2">LANGUAGES</th>
+              </tr>
+              <tr>
+                <th>Language</th>
+                <th>Proficiency</th>
+              </tr>
+            </thead>
+            <tbody id="languagesBody">
+              <!-- Dynamic Rows Will Be Added Here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
 </html>

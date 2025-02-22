@@ -1,126 +1,288 @@
-body {
+/* Root Variables */
+:root {
+    --primary-font: "Bebas Neue", sans-serif;
+    --secondary-font: "Manrope", sans-serif;
+    --primary-color: #FFA94D;
+    --secondary-color: #5e5e5e;
+    --background-color: #f0f0f0;
+    --btn-bg: #007bff;
+    --btn-hover-bg: #0056b3;
+  }
+  
+  /* General Styles */
+  body {
+    background-color: var(--background-color);
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.content {
-    opacity: 0;
-    animation: fadeIn 2s ease-in both;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translate3d(0, -20%, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-.resume-container {
-    max-width: 900px;
-    background-color: aliceblue;
+  }
+  
+  /* Utility Classes */
+  .flex-center {
     display: flex;
-    margin: 20px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-.sidebar {
-    background-color: rgb(238, 220, 255);
-    padding: 20px;
-    width: 28%;
-    height: auto;
-}
-
-.sidebar h3 {
-    font-weight: 400;
-}
-
-.sidebar h2 {
-    margin: 0;
-    font-size: 25px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.contact .education .skills {
-    margin-top: 10px;
-}
-
-.contact p, .education p, .skills p {
-    margin: 5px 0;
-    font-size: 14px;
-    word-wrap: break-word;
-}
-
-.main-content {
-    width: 74%;
-    background-color: aliceblue;
-    padding: 20px;
-    padding-bottom: 13%;
-}
-
-.main-content h3 {
-    font-size: 16px;
-    color: rgb(59, 67, 65);
-    font-family: Arial, sans-serif;
-}
-
-.main-content p {
-    color: rgb(43, 40, 40);
-    font-size: 14px;
-}
-
-.main-content ul li {
-    color: rgb(43, 40, 40);
-    font-size: 14px;
-    margin-top: 7px;
-    list-style-type: circle;
-}
-
-.skills-strength-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px; /* Add space between items */
-}
-
-.skills-strength {
-    flex: 1;
-    text-wrap: wrap;
-    min-width: 200px; /* Ensure a minimum width */
-    margin-top: 10px;
-    background-color: rgb(238, 220, 255);
-    border-radius: 10% 0 10% 0;
-    padding: 10px;
-    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
-    overflow: hidden;
-    word-wrap: break-word;
-}
-
-.skills-strength h3 {
-    text-align: center;
-    color: black;
-}
-
-footer {
-    display: flex;
-    background-color: rgb(217, 177, 255);
-    color: rgb(0, 0, 0);
-    height: 8vh;
-    position: absolute;
-    margin-top: 10vh;
-    bottom: 0;
-    width: 100%;
     align-items: center;
     justify-content: center;
-    font-family: Arial, sans-serif;
-    font-size: small;
-    
+  }
+  
+  /* Top Buttons */
+  .top-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: #f8f9fa;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+  }
+  
+  /* Input Group */
+  .input-group {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 0.625rem;
+    border-radius: 0.375rem;
+    border: 1px solid #ddd;
+  }
+  
+  label {
+    font-size: 0.875rem;
     font-weight: bold;
-}
+    color: #333;
+  }
+  
+  /* Input */
+  input[type="number"] {
+    width: 3.75rem;
+    padding: 0.313rem;
+    font-size: 0.875rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    text-align: center;
+  }
+  
+  /* Button */
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: #fff;
+    background: var(--btn-bg);
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: var(--btn-hover-bg);
+  }
+  
+  /* Container */
+  .container {
+    max-width: 900px;
+    min-height: 1200px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 0.625rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+  }
+  
+  /* Heading */
+  .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .heading .profile {
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+  }
+  
+  .heading h1 {
+    font-family: var(--primary-font);
+    font-weight: 300;
+    color: var(--primary-color);
+    margin: 0.313rem;
+  }
+  
+  /* Contact Info */
+  .heading .contact-info {
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 0.625rem;
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    gap: 0.625rem;
+  }
+  
+  .contact-info div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-info a {
+    color: orange;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Section Headings */
+  h2 {
+    font-family: var(--primary-font);
+    font-weight: 100;
+    color: var(--primary-color);
+    margin: 1.875rem;
+    border-bottom: 1px solid var(--secondary-color);
+  }
+  
+  /* Paragraphs */
+  .main p {
+    margin: 1.875rem;
+  }
+  
+  /* Experience Table */
+  .experience-table {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  .job {
+    display: grid;
+    grid-template-columns: minmax(120px, 1fr) 3fr;
+    border-bottom: 1px solid var(--secondary-color);
+  }
+  
+  /* Company */
+  .company {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-right: 1px solid var(--secondary-color);
+    padding: 0.625rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Points */
+  .points {
+    padding-left: 0.625rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Responsive Grid */
+  @media (max-width: 768px) {
+    .job {
+      grid-template-columns: 1fr;
+    }
+    .company {
+      border-right: none;
+      border-bottom: 1px solid var(--secondary-color);
+      padding-bottom: 0.313rem;
+    }
+  }
+  
+  /* Table Container */
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Table */
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
+    margin: auto;
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 1.25rem;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    border: 1px solid var(--secondary-color);
+    padding: 0.625rem;
+    text-align: left;
+    font-size: 0.875rem;
+  }
+  
+  /* Table Header */
+  .custom-table th {
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Alternate Row Styling */
+  .custom-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Responsive Table */
+  @media (max-width: 768px) {
+    .custom-table {
+      width: 100%;
+    }
+    
+    .custom-table thead {
+      display: none;
+    }
+  
+    .custom-table tr {
+      display: block;
+      margin-bottom: 0.625rem;
+      border: 1px solid var(--secondary-color);
+      padding: 0.625rem;
+      background: white;
+      border-radius: 0.5rem;
+    }
+  
+    .custom-table td {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.625rem;
+      border-bottom: 1px solid var(--secondary-color);
+    }
+  
+    .custom-table td:last-child {
+      border-bottom: none;
+    }
+  
+    .custom-table td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      color: var(--primary-color);
+      text-transform: uppercase;
+    }
+  }
+  
+  
+  
